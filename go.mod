@@ -1,4 +1,4 @@
-module github.com/razonyang/hugo-theme-bootstrap-skeleton
+module github.com/pixelasticity/Abby-the-Bee
 
 go 1.18
 
