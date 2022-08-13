@@ -1,101 +1,60 @@
-# Hugo Theme Bootstrap Skeleton
+# React Bootstrap Starter
 
-The starter template for [Hugo Bootstrap Theme](https://github.com/razonyang/hugo-theme-bootstrap) that install the theme as a Hugo module.
+![logo](./screenshots/react-bootstrap-starter.png)
 
-## Demo
+[Documentation](https://chrisdevcode.hashnode.dev/react-and-bootstrap-starter-template) | [Live Demo](https://react-bootstrap-temp.netlify.app/)
 
-| Platform | URL |
-|---|---|
-| Netlify | https://hbs-skeleton.netlify.app/ |
-| GitHub Pages | https://razonyang.github.io/hugo-theme-bootstrap-skeleton/ |
-| Cloudflare Pages | https://hbs-skeleton.pages.dev/ |
-| Docker image | See also [Dockerfile](Dockerfile) |
+React Bootstrap Starter is a starter template for react and bootstrap created by [Chris Achinga](http://chrisdev.netlify.app). This theme uses Create React App, react-bootstrap and gh-pages.
+
+
+## Download and Installation
+
+To begin using this template, choose one of the following options to get started:
+
+Fork and clone the repository.
+
+Install the dependencies:
+
+```powershell-interactive
+npm install
+```
 
 ## Usage
 
-Please make sure you have install the [build tools](https://hbs.razonyang.com/v1/en/docs/getting-started/prerequisites/#build-tools) prior to using this template.
+Start editing and customizing according to your needs.
 
-**1. Clone this repository**
+Run locally:
 
-```shell
-$ git clone https://github.com/razonyang/hugo-theme-bootstrap-skeleton.git blog
-$ cd blog
-$ rm -rf .git
-$ git init -b main
+```powershell-interactive
+npm start
 ```
 
-> The `rm -rf .git` is a dangerous action, please make sure that you enter the right folder.
+## Dependencies:
 
-**2. Modify the `go.mod`**
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [react-bootstrap](https://react-bootstrap.github.io/)
 
-Replace the following line to yours, such as `module github.com/user/repo`.
+## Bugs and Issues
 
-```text
-module github.com/razonyang/hugo-theme-bootstrap-skeleton
-```
+Have a bug or an issue with this template? Open a new issue here on GitHub.
 
-**3. Commit and push changes to your repository**
+## Copyright and License
 
-```shell
-$ git add -A
-$ git commit -m 'First commit'
-$ git remote set-url origin github.com/user/repo
-$ git push origin main
-```
+Copyright 2021 Chris Achinga. Code released under the [MIT license](LICENSE).
 
-## Go Proxy(Optional)
+## Status
 
-If you're located at China mainland without VPN, the Hugo module download may fail.
+<div align='center'>
 
-There are two proxies for this: [GOPROXY.CN](https://goproxy.cn) and [GOPROXY.IO](https://goproxy.io).
+[![GitHub forks](https://img.shields.io/github/forks/ChrisAchinga/react-bootstrap-starter)](https://github.com/ChrisAchinga/react-bootstrap-starter/network)
 
-```bash
-$ export HUGO_MODULE_PROXY=https://goproxy.cn
-```
+[![GitHub stars](https://img.shields.io/github/stars/ChrisAchinga/react-bootstrap-starter)](https://github.com/ChrisAchinga/react-bootstrap-starter/stargazers)
 
-> Please note that, Hugo doesn't respect the `GOPROXY` env var, please use `HUGO_MODULE_PROXY` instead.
+[![Depfu](https://badges.depfu.com/badges/80c94d4ad87f69ecde6d83ae05e65b63/status.svg)](https://depfu.com)
 
-You can also set the `module.proxy` instead of using env var.
+[![Depfu](https://badges.depfu.com/badges/80c94d4ad87f69ecde6d83ae05e65b63/overview.svg)](https://depfu.com/github/ChrisAchinga/react-bootstrap-starter?project_id=18009)
 
-```yaml
-module:
-  proxy: https://goproxy.cn
-```
+[![Depfu](https://badges.depfu.com/badges/80c94d4ad87f69ecde6d83ae05e65b63/count.svg)](https://depfu.com/github/ChrisAchinga/react-bootstrap-starter?project_id=18009)
 
-## Server
-
-**1. Install dependencies**
-
-```shell
-$ npm i
-```
-
-Generally, this step only needs to be performed once for each local project.
-
-**2. Start server**
-
-```shell
-$ hugo server
-```
-
-## Upgrade theme
-
-```shell
-$ hugo mod get -u
-$ hugo mod npm pack
-$ npm i
-$ git add go.mod go.sum
-$ git commit -m 'Update the theme'
-```
-
-## Deployment
-
-**Please make sure you've change the `baseURL` on `config/production/config.yaml` before deploying your site.**
-
-This template supports GitHub Pages, Docker image, Netlify out-of-box. See also [Deployment](https://hbs.razonyang.com/v1/en/docs/deployment/) for getting more detail.
-
-## Documentations
-
-- [English](https://hbs.razonyang.com/v1/en/)
-- [简体中文](https://hbs.razonyang.com/v1/zh-hans/)
-- [繁體中文](https://hbs.razonyang.com/v1/zh-hant/)
+</div>
