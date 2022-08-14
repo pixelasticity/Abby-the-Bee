@@ -1,7 +1,19 @@
+$theme-colors: (
+  "primary": #00bdf2,
+  "secondary": yellow,
+  "light": white,
+  "dark": black
+);
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import 'styles/typed';
 
 :root {
-  --primary: #00bdf2;
+  --bs-primary: #00bdf2;
+  --bs-primary-rgb: 0, 189, 242;
+  --bs-secondary: ;
+  --bs-light: ;
+  --bs-dark: ;
 }
 
 body {
@@ -87,7 +99,7 @@ body {
 
 .navbar .navbar-nav .nav-link {
   padding: 20px 15px;
-  color: var(--dark);
+  color: var(--bs-dark);
   font-size: 18px;
   font-weight: 600;
   outline: none;
@@ -95,7 +107,7 @@ body {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-  color: var(--primary);
+  color: var(--bs-primary);
 }
 
 @media (max-width: 991.98px) {
@@ -113,7 +125,11 @@ body {
 
 .typed-cursor {
   font-size: 30px;
-  color: var(--dark);
+  color: var(--bs-dark);
+}
+
+.typed-text-output {
+  @include typed("String 1", "String 2");
 }
 
 .btn-play {
@@ -126,7 +142,7 @@ body {
   border: none;
   outline: none !important;
   padding: 18px 20px 20px 28px;
-  background: var(--primary);
+  background: var(--bs-primary);
 }
 
 .btn-play:before {
@@ -139,7 +155,7 @@ body {
   display: block;
   width: 60px;
   height: 60px;
-  background: var(--primary);
+  background: var(--bs-primary);
   border-radius: 100%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -166,7 +182,7 @@ body {
   width: 0;
   height: 0;
   left: -1px;
-  border-left: 16px solid var(--primary);
+  border-left: 16px solid var(--bs-primary);
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
 }
@@ -234,7 +250,7 @@ body {
 }
 
 #skill .nav-pills .nav-link {
-  color: var(--dark);
+  color: var(--bs-dark);
 }
 
 #skill .nav-pills .nav-link.active {
@@ -262,7 +278,7 @@ body {
 #portfolio-flters li {
   display: inline-block;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--bs-dark);
   cursor: pointer;
   transition: .5s;
   border-bottom: 2px solid transparent;
@@ -270,8 +286,8 @@ body {
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-  color: var(--primary);
-  border-color: var(--primary);
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 .portfolio-img {
@@ -345,7 +361,7 @@ body {
 .testimonial-right img {
   position: absolute;
   padding: 5px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--bs-secondary);
   border-radius: 70px;
 }
 
@@ -391,7 +407,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--bs-secondary);
   border-radius: 60px;
 }
 
@@ -410,7 +426,7 @@ body {
   width: 30px;
   height: 30px;
   background: #FFFFFF;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--bs-secondary);
   border-radius: 30px;
   transition: .5s;
 }
@@ -423,10 +439,10 @@ body {
   top: 5px;
   left: 5px;
   border-radius: 16px;
-  background: var(--secondary);
+  background: var(--bs-secondary);
   transition: .5s;
 }
 
 .testimonial-carousel .owl-dot.active::after {
-  background: var(--primary);
+  background: var(--bs-primary);
 }
