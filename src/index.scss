@@ -1,8 +1,8 @@
 $theme-colors: (
   "primary": #00bdf2,
-  "secondary": yellow,
-  "light": white,
-  "dark": black
+  "secondary": #ffc448,
+  "light": #fafafb,
+  "dark": #12141d
 );
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
@@ -11,9 +11,10 @@ $theme-colors: (
 :root {
   --bs-primary: #00bdf2;
   --bs-primary-rgb: 0, 189, 242;
-  --bs-secondary: ;
-  --bs-light: ;
-  --bs-dark: ;
+  --bs-secondary: #ffc448;
+  --bs-secondary-rgb: 255, 196, 72;
+  --bs-light: #fafafb;
+  --bs-dark: #12141d;
 }
 
 body {
