@@ -20,8 +20,10 @@ const Header = ({ head, description }) => {
             <Col lg="6" className="py-6 pb-0 pt-lg-0">
               <h3 class="text-primary mb-3">I'm</h3>
               <h1 class="display-3 mb-3">{head}</h1>
-              <h2 class="typed-text-output d-inline">{description}</h2>
-              <div class="typed-text d-none">Bilingual, Friendly, Curious, Good Student, Happy</div>
+              <h2 class="typed-text-output d-inline">
+                <span class="visually-hidden">Bilingual, friendly, curious, happy</span>
+              </h2>
+              <div class="typed-text d-none">{description}</div>
               <div class="d-flex align-items-center pt-5">
                 <Button href="https://www.amazon.com/Abby-Stays-Home-Stop-Pandemic/dp/B088LKDK8W" className="btn btn-primary py-3 px-4 me-5">Buy Book Now</Button>
                 <button type="button" class="btn-play" data-bs-toggle="modal"
