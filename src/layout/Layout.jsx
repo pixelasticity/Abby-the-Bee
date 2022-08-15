@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react';
 // components
 import LoadingSpinner from "../components/LoadingSpinner";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer.jsx";
+import BackToTop from "../components/BackToTop.jsx";
 
 const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true)
@@ -18,6 +20,7 @@ const Layout = ({ children }) => {
       <Menu />
       <main>{children}</main>
       <Footer />
+      <BackToTop />
     </>
   );
 };
