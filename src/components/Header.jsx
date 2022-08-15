@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
+import Ratio from 'react-bootstrap/Ratio';
 
 const Header = ({ head, description }) => {
   const [show, setShow] = useState(false);
@@ -13,7 +14,7 @@ const Header = ({ head, description }) => {
   const handleShow = () => setShow(true);
 
   return (
-    <div>
+    <>
       <Container fluid id="home" className="bg-light my-6 mt-0">
         <Container>
           <Row className="g-5 align-items-center">
@@ -50,12 +51,12 @@ const Header = ({ head, description }) => {
           </Button>
         </Modal.Header>
         <Modal.Body>
-          <div class="ratio ratio-16x9">
-            <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"  frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="modal video"></iframe>
-          </div>
+          <Ratio aspectRatio="16x9">
+            <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="modal video"></iframe>
+          </Ratio>
         </Modal.Body>
-      </Modal>      
-    </div>
+      </Modal>
+    </>
   )
 }
 
