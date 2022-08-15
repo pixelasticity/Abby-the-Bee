@@ -130,7 +130,7 @@ body {
 }
 
 .typed-text-output {
-  @include typed("String 1", "String 2");
+  @include typed("Bilingual", "Friendly", "Curious", "Happy", (pause-typed: .7, delete: .02, pause-deleted: .1), (caret-width: 3px, caret-space: .3ch));
 }
 
 .btn-play {
