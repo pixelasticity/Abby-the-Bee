@@ -10,6 +10,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
+import { faCropSimple, faCodeBranch, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
   // page content
@@ -195,6 +196,71 @@ const Home = () => {
         </Container>
       </div>
       {/* Expertise End */}
+
+      {/* Service Start */}
+      <Container fluid className="bg-light my-5 py-6" id="service">
+        <Container>
+          <Row className="g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6">
+              <h1 class="display-5 mb-0">My Services</h1>
+            </Col>
+            <Col lg="6" className="text-lg-end">
+              <Button className="py-3 px-5" href="#">Hire Me</Button>
+            </Col>
+          </Row>
+          <Row className="g-4">
+            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+              <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="bg-icon flex-shrink-0 mb-3">
+                  <FontAwesomeIcon icon={faCropSimple} className="fa-2x text-dark" />
+                </div>
+                <div class="ms-sm-4">
+                  <h4 class="mb-3">Creative Design</h4>
+                  <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                  <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                </div>
+              </div>
+            </Col>
+            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.3s">
+              <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="bg-icon flex-shrink-0 mb-3">
+                  <FontAwesomeIcon icon={faCodeBranch} className="fa-2x text-dark" />
+                </div>
+                <div class="ms-sm-4">
+                  <h4 class="mb-3">Graphic Design</h4>
+                  <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                  <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                </div>
+              </div>
+            </Col>
+            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+              <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="bg-icon flex-shrink-0 mb-3">
+                <FontAwesomeIcon icon={faCode} className="fa-2x text-dark" />
+                </div>
+                <div class="ms-sm-4">
+                  <h4 class="mb-3">Web Design</h4>
+                  <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                  <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                </div>
+              </div>
+            </Col>
+            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.3s">
+              <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="bg-icon flex-shrink-0 mb-3">
+                <FontAwesomeIcon icon={faLaptopCode} className="fa-2x text-dark" />
+                </div>
+                <div class="ms-sm-4">
+                  <h4 class="mb-3">UI/UX Design</h4>
+                  <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                  <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      {/* Service End */}
     </>
   )
 }
