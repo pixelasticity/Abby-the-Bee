@@ -5,6 +5,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
 
@@ -15,6 +18,18 @@ const Home = () => {
 
   return (
     <>
+      <style type="text/css">
+        {`
+        .btn-primary,
+        .nav-pills .nav-link.active {
+          background-color: var(--bs-primary);
+          --bs-btn-border-color: var(--bs-primary);
+        }
+        .progress-bar {
+          --bs-progress-bar-bg: var(--bs-primary);
+        }
+        `}
+      </style>
       <Meta title={pageTitle}/>
       <Header head={pageTitle} description={pageDescription} />
       <div id="about" class="container-xxl py-6">
@@ -58,6 +73,128 @@ const Home = () => {
           </Row>
         </Container>
       </div>
+
+      {/* Expertise Start */}
+      <div class="container-xxl py-6 pb-5" id="skill">
+        <Container>
+          <Row className="g-5">
+            <Col lg="6" class="wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="display-5 mb-5">Skills &amp; Experience</h1>
+              <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+              <h3 class="mb-4">My Skills</h3>
+              <Row className="align-items-center">
+                <Col md="6">
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">HTML</h6>
+                      <h6 class="font-weight-bold">95%</h6>
+                    </div>
+                    <ProgressBar now={95} />
+                  </div>
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">CSS</h6>
+                      <h6 class="font-weight-bold">85%</h6>
+                    </div>
+                    <ProgressBar now={85} variant="warning" />
+                  </div>
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">PHP</h6>
+                      <h6 class="font-weight-bold">90%</h6>
+                    </div>
+                    <ProgressBar now={90} variant="danger" />
+                  </div>
+                </Col>
+                <Col md="6">
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">Javascript</h6>
+                      <h6 class="font-weight-bold">90%</h6>
+                    </div>
+                    <ProgressBar now={90} variant="danger" />
+                  </div>
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">Angular JS</h6>
+                      <h6 class="font-weight-bold">95%</h6>
+                    </div>
+                    <ProgressBar now={95} variant="dark" />
+                  </div>
+                  <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-weight-bold">Wordpress</h6>
+                      <h6 class="font-weight-bold">85%</h6>
+                    </div>
+                    <ProgressBar now={85} />
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.5s">
+              <Tabs defaultActiveKey="exp" id="test" className="rounded-3 border border-2 border-primary mb-5" variant="pills" justify>
+                <Tab eventKey="exp" className="p-0" title="Experience" tabClassName="w-100 py-3 fs-5">
+                  <Row className="gy-5 gx-4">
+                    <Col sm="6">
+                      <h5>UI Designer</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Apex Software Inc</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>Product Designer</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Apex Software Inc</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>Web Designer</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Apex Software Inc</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>Apps Designer</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Apex Software Inc</h6>
+                    </Col>
+                  </Row>
+                </Tab>
+                <Tab eventKey="edu" className="p-0" title="Education" tabClassName="w-100 py-3 fs-5">
+                  <Row className="gy-5 gx-4">
+                    <Col sm="6">
+                      <h5>UI Design Course</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Cambridge University</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>iOS Development</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Cambridge University</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>Web Design</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Cambridge University</h6>
+                    </Col>
+                    <Col sm="6">
+                      <h5>Apps Design</h5>
+                      <hr class="text-primary my-2"/>
+                      <p class="text-primary mb-1">2000 - 2045</p>
+                      <h6 class="mb-0">Cambridge University</h6>
+                    </Col>
+                  </Row>
+                </Tab>
+              </Tabs>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Expertise End */}
     </>
   )
 }
