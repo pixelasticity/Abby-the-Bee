@@ -15,6 +15,7 @@ import { faForumbee } from '@fortawesome/free-brands-svg-icons'
 import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from '@fortawesome/free-solid-svg-icons'
 
 import Isotope from 'isotope-layout'
+import Lightbox from 'bs5-lightbox'
 
 const Home = () => {
   // page content
@@ -42,6 +43,17 @@ const Home = () => {
         });
       });
     });
+
+    const lightboxOptions = {
+      gallery: 'portfolio',
+      keyboard: true
+    };
+
+    document.querySelectorAll('.lightbox-btn').forEach((el) => el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lightbox = new Lightbox(el, lightboxOptions);
+      lightbox.show();
+    }));
   }, [])
 
   return (
@@ -309,7 +321,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-1.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-1.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="img/project-1.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -318,7 +330,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-2.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-2.jpg" data-lightbox="portfolio">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-2.jpg" data-toggle="lightbox" data-gallery="portfolio">
                     <FontAwesomeIcon icon={faEye} />
                   </Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#">
@@ -331,7 +343,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-3.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-3.jpg" data-lightbox="portfolio">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-3.jpg" data-toggle="lightbox" data-gallery="portfolio">
                     <FontAwesomeIcon icon={faEye} />
                   </Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
@@ -342,7 +354,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-4.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-4.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-4.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -351,7 +363,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-5.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-5.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-5.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -360,7 +372,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-6.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-6.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-6.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>

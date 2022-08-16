@@ -31,6 +31,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "latest",
+    "bs5-lightbox": "^1.8.0",
     "counterup2": "^2.0.2",
     "isotope-layout": "^3.0.6",
     "lightbox2": "^2.11.3",
