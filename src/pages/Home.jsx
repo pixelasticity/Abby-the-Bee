@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+// Components
 import Header from '../components/Header'
 import Meta from '../components/Meta'
 import Container from 'react-bootstrap/Container'
@@ -10,12 +12,37 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
-import { faCropSimple, faCodeBranch, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from '@fortawesome/free-solid-svg-icons'
+
+import Isotope from 'isotope-layout'
 
 const Home = () => {
   // page content
   const pageTitle = 'Abby the Bee'
   const pageDescription = 'a bilingual children’s book series for early readers'
+
+  useEffect(() => {
+    var portfolioIsotope = new Isotope('#portfolio-container', {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'fitRows'
+    });
+    const filters = document.querySelectorAll('#portfolio-flters li');
+    const filterItems = [].slice.call(filters);
+  
+    filterItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        filterItems.forEach(function (item) {
+          item.classList.remove('active');
+        });
+        this.classList.add('active');
+        
+        var filterValue = this.getAttribute('data-filter');
+        portfolioIsotope.arrange({
+          filter: filterValue
+        });
+      });
+    });
+  }, [])
 
   return (
     <>
@@ -261,6 +288,87 @@ const Home = () => {
         </Container>
       </Container>
       {/* Service End */}
+
+      {/* Projects Start */}
+      <div class="container-xxl py-6 pt-5" id="project">
+        <Container>
+          <Row className="g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6">
+              <h1 class="display-5 mb-0">My Projects</h1>
+            </Col>
+            <Col lg="6" class="text-lg-end">
+              <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                <li class="mx-3 active" data-filter="*">All Projects</li>
+                <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                <li class="mx-3" data-filter=".second">Graphic Design</li>
+              </ul>
+            </Col>
+          </Row>
+          <Row id="portfolio-container" className="g-4 wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="4" md="6" className="portfolio-item first">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-1.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-1.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
+                </div>
+              </div>
+            </Col>
+            <Col lg="4" md="6" className="portfolio-item second">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-2.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-2.jpg" data-lightbox="portfolio">
+                    <FontAwesomeIcon icon={faEye} />
+                  </Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#">
+                    <FontAwesomeIcon icon={faLink} />
+                  </Button>
+                </div>
+              </div>
+            </Col>
+            <Col lg="4" md="6" className="portfolio-item first">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-3.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-3.jpg" data-lightbox="portfolio">
+                    <FontAwesomeIcon icon={faEye} />
+                  </Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
+                </div>
+              </div>
+            </Col>
+            <Col lg="4" md="6" className="portfolio-item second">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-4.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-4.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
+                </div>
+              </div>
+            </Col>
+            <Col lg="4" md="6" className="portfolio-item first">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-5.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-5.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
+                </div>
+              </div>
+            </Col>
+            <Col lg="4" md="6" className="portfolio-item second">
+              <div class="portfolio-img rounded overflow-hidden">
+                <Image fluid src="/img/project-6.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="/img/project-6.jpg" data-lightbox="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Projects End */}
     </>
   )
 }
