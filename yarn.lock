@@ -3646,6 +3646,11 @@
   "resolved" "https://registry.npmjs.org/console-browserify/-/console-browserify-1.2.0.tgz"
   "version" "1.2.0"
 
+"consolidated-events@^1.1.0 || ^2.0.0":
+  "integrity" "sha512-2/uRVMdRypf5z/TW/ncD/66l75P5hH2vM/GR8Jf8HLc2xnfJtmina6F6du8+v4Z2vTrMo7jC+W1tmEEuuELgkQ=="
+  "resolved" "https://registry.npmjs.org/consolidated-events/-/consolidated-events-2.0.2.tgz"
+  "version" "2.0.2"
+
 "constants-browserify@^1.0.0":
   "integrity" "sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U="
   "resolved" "https://registry.npmjs.org/constants-browserify/-/constants-browserify-1.0.0.tgz"
@@ -3767,10 +3772,10 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
-"counterup2@^2.0.2":
-  "integrity" "sha512-+drmqOOcOa17KJG9o5+wGuEgLVh4wdb2pkpGlCu3MtQ2idB73V8yJEb8WyINZ1+Fjy7dLiWKa0wihvYzk/n32A=="
-  "resolved" "https://registry.npmjs.org/counterup2/-/counterup2-2.0.2.tgz"
-  "version" "2.0.2"
+"countup.js@^2.2.0":
+  "integrity" "sha512-dQ7F/CmKGjaO6cDfhtEXwsKVlXIpJ89dFs8PvkaZH9jBVJ2Z8GU4iwG/qP7MgY8qwr+1skbwR6qecWWQLUzB8Q=="
+  "resolved" "https://registry.npmjs.org/countup.js/-/countup.js-2.3.2.tgz"
+  "version" "2.3.2"
 
 "create-ecdh@^4.0.0":
   "integrity" "sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A=="
@@ -9269,7 +9274,7 @@
     "react-is" "^16.3.2"
     "warning" "^4.0.0"
 
-"prop-types@^15.5.10", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -9463,6 +9468,13 @@
     "uncontrollable" "^7.2.1"
     "warning" "^4.0.3"
 
+"react-countup@^6.3.0":
+  "integrity" "sha512-uZsE+kuisXp/3OZeAuq2lzp6sXKmzw331Et5CRy4ueR9VcOp7z7T6/O1F04BC2Pa2frKmIITsghi3Hh933qWXQ=="
+  "resolved" "https://registry.npmjs.org/react-countup/-/react-countup-6.3.0.tgz"
+  "version" "6.3.0"
+  dependencies:
+    "countup.js" "^2.2.0"
+
 "react-dev-utils@^11.0.3":
   "integrity" "sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A=="
   "resolved" "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-11.0.4.tgz"
@@ -9533,7 +9545,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react-is@^17.0.1":
+"react-is@^17.0.1", "react-is@^17.0.1 || ^18.0.0":
   "integrity" "sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
@@ -9646,7 +9658,17 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^17.0.2", "react@>= 16", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.14.0", "react@>=16.3", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2":
+"react-waypoint@^10.3.0":
+  "integrity" "sha512-iF1y2c1BsoXuEGz08NoahaLFIGI9gTUAAOKip96HUmylRT6DUtpgoBPjk/Y8dfcFVmfVDvUzWjNXpZyKTOV0SQ=="
+  "resolved" "https://registry.npmjs.org/react-waypoint/-/react-waypoint-10.3.0.tgz"
+  "version" "10.3.0"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "consolidated-events" "^1.1.0 || ^2.0.0"
+    "prop-types" "^15.0.0"
+    "react-is" "^17.0.1 || ^18.0.0"
+
+"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.3.0", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.14.0", "react@>=16.3", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -11777,11 +11799,6 @@
   optionalDependencies:
     "chokidar" "^3.4.1"
     "watchpack-chokidar2" "^2.0.1"
-
-"waypoints@^4.0.1":
-  "integrity" "sha512-PbydbsTvCFYoE1DaRAKBM4xPQi+7ULcULZ7vK79NLM55da5g46oyY62Xv9X5Z9F7O/qXmcS/XJ7Ae2pYij4bpw=="
-  "resolved" "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz"
-  "version" "4.0.1"
 
 "wbuf@^1.1.0", "wbuf@^1.7.3":
   "integrity" "sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA=="
