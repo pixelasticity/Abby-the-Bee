@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 // Components
 import Header from '../components/Header'
 import Meta from '../components/Meta'
@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
 import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from '@fortawesome/free-solid-svg-icons'
 
+import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
 import Isotope from 'isotope-layout'
 import Lightbox from 'bs5-lightbox'
@@ -23,7 +24,43 @@ const Home = () => {
   const pageTitle = 'Abby the Bee'
   const pageDescription = 'a bilingual children’s book series for early readers'
 
+  const progressRef1 = useRef(null)
+  const progressRef2 = useRef(null)
+  const progressRef3 = useRef(null)
+  const progressRef4 = useRef(null)
+  const progressRef5 = useRef(null)
+  const progressRef6 = useRef(null)
+
+  function progressBarAnimation1() {
+    let progress = progressRef1.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+  function progressBarAnimation2() {
+    let progress = progressRef2.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+  function progressBarAnimation3() {
+    let progress = progressRef3.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+  function progressBarAnimation4() {
+    let progress = progressRef4.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+  function progressBarAnimation5() {
+    let progress = progressRef5.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+  function progressBarAnimation6() {
+    let progress = progressRef6.current.children[0]
+    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
+  }
+
   useEffect(() => {
+    document.querySelectorAll('.progress .progress-bar').forEach((item) => {
+      item.style.width = item.getAttribute('aria-valuemin') + '%'
+    });
+
     var portfolioIsotope = new Isotope('#portfolio-container', {
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
@@ -134,21 +171,27 @@ const Home = () => {
                       <h6 class="font-weight-bold">HTML</h6>
                       <h6 class="font-weight-bold">95%</h6>
                     </div>
-                    <ProgressBar now={95} />
+                    <Waypoint onEnter={ progressBarAnimation1 } topOffset="80%">
+                      <ProgressBar now={95} ref={progressRef1} />
+                    </Waypoint>
                   </div>
                   <div class="skill mb-4">
                     <div class="d-flex justify-content-between">
                       <h6 class="font-weight-bold">CSS</h6>
                       <h6 class="font-weight-bold">85%</h6>
                     </div>
-                    <ProgressBar now={85} variant="warning" />
+                    <Waypoint onEnter={ progressBarAnimation3 } topOffset="80%">
+                    <ProgressBar now={85} ref={progressRef3} variant="warning" />
+                    </Waypoint>
                   </div>
                   <div class="skill mb-4">
                     <div class="d-flex justify-content-between">
                       <h6 class="font-weight-bold">PHP</h6>
                       <h6 class="font-weight-bold">90%</h6>
                     </div>
-                    <ProgressBar now={90} variant="danger" />
+                    <Waypoint onEnter={ progressBarAnimation5 } topOffset="80%">
+                      <ProgressBar now={90} ref={progressRef5} variant="danger" />
+                    </Waypoint>
                   </div>
                 </Col>
                 <Col md="6">
@@ -157,21 +200,27 @@ const Home = () => {
                       <h6 class="font-weight-bold">Javascript</h6>
                       <h6 class="font-weight-bold">90%</h6>
                     </div>
-                    <ProgressBar now={90} variant="danger" />
+                    <Waypoint onEnter={ progressBarAnimation2 } topOffset="80%">
+                      <ProgressBar now={90} ref={progressRef2} variant="danger" />
+                    </Waypoint>
                   </div>
                   <div class="skill mb-4">
                     <div class="d-flex justify-content-between">
                       <h6 class="font-weight-bold">Angular JS</h6>
                       <h6 class="font-weight-bold">95%</h6>
                     </div>
-                    <ProgressBar now={95} variant="dark" />
+                    <Waypoint onEnter={ progressBarAnimation4 } topOffset="80%">
+                      <ProgressBar now={95} ref={progressRef4} variant="dark" />
+                    </Waypoint>
                   </div>
                   <div class="skill mb-4">
                     <div class="d-flex justify-content-between">
                       <h6 class="font-weight-bold">Wordpress</h6>
                       <h6 class="font-weight-bold">85%</h6>
                     </div>
-                    <ProgressBar now={85} />
+                    <Waypoint onEnter={ progressBarAnimation6 } topOffset="80%">
+                      <ProgressBar now={85} ref={progressRef6} />
+                    </Waypoint>
                   </div>
                 </Col>
               </Row>
