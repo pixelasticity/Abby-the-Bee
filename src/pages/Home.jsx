@@ -140,14 +140,14 @@ const Home = () => {
               <div class="d-flex align-items-center mb-3">
                 <h5 class="border-end pe-3 me-3 mb-0">Stays Home to Stop the Pandemic</h5>
                 <h2 class="text-primary fw-bold mb-0">
-                  <CountUp start={1980} end={2020} delay={0} enableScrollSpy redraw />
+                  <CountUp start={1980} end={2020} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
               <p class="mb-4">Abby loves going to school and playing in the park with other bees, but a pandemic is spreading around the world and schools and parks are closed. Abby learns to have fun staying at home and how to help so less bees get sick.</p>
               <div class="d-flex align-items-center mb-3">
                 <h5 class="border-end pe-3 me-3 mb-0">I'm Bee-lingual</h5>
                 <h2 class="text-primary fw-bold mb-0">
-                  <CountUp start={1980} end={2022} delay={0} enableScrollSpy redraw />
+                  <CountUp start={1980} end={2022} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
               <p class="mb-0">Abby makes a new friend at the beach and shows him what it is to know two languages. They play together while learning words in English and Spanish.</p>
