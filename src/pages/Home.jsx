@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 // Components
 import Header from '../components/Header'
 import Meta from '../components/Meta'
@@ -7,9 +6,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
-import ProgressBar from 'react-bootstrap/ProgressBar'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
 import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from '@fortawesome/free-solid-svg-icons'
@@ -17,50 +13,13 @@ import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from 
 import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
 import Isotope from 'isotope-layout'
-import Lightbox from 'bs5-lightbox'
 
 const Home = () => {
   // page content
   const pageTitle = 'Abby the Bee'
   const pageDescription = 'a bilingual children’s book series for early readers'
 
-  const progressRef1 = useRef(null)
-  const progressRef2 = useRef(null)
-  const progressRef3 = useRef(null)
-  const progressRef4 = useRef(null)
-  const progressRef5 = useRef(null)
-  const progressRef6 = useRef(null)
-
-  function progressBarAnimation1() {
-    let progress = progressRef1.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-  function progressBarAnimation2() {
-    let progress = progressRef2.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-  function progressBarAnimation3() {
-    let progress = progressRef3.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-  function progressBarAnimation4() {
-    let progress = progressRef4.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-  function progressBarAnimation5() {
-    let progress = progressRef5.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-  function progressBarAnimation6() {
-    let progress = progressRef6.current.children[0]
-    progress.style.width = progress.getAttribute('aria-valuenow') + '%'
-  }
-
   useEffect(() => {
-    document.querySelectorAll('.progress .progress-bar').forEach((item) => {
-      item.style.width = item.getAttribute('aria-valuemin') + '%'
-    });
-
     var portfolioIsotope = new Isotope('#portfolio-container', {
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
@@ -81,17 +40,6 @@ const Home = () => {
         });
       });
     });
-
-    const lightboxOptions = {
-      gallery: 'portfolio',
-      keyboard: true
-    };
-
-    document.querySelectorAll('.lightbox-btn').forEach((el) => el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const lightbox = new Lightbox(el, lightboxOptions);
-      lightbox.show();
-    }));
   }, [])
 
   return (
@@ -157,7 +105,7 @@ const Home = () => {
       </div>
 
       {/* Expertise Start */}
-      <div class="container-xxl py-6 pb-5" id="skill">
+      { /*<div class="container-xxl py-6 pb-5" id="skill">
         <Container>
           <Row className="g-5">
             <Col lg="6" class="wow fadeInUp" data-wow-delay="0.1s">
@@ -287,7 +235,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       {/* Expertise End */}
 
       {/* Service Start */}
