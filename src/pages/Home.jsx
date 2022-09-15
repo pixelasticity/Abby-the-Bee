@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 // Components
 import Header from '../components/Header'
 import Meta from '../components/Meta'
@@ -13,6 +14,7 @@ import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink } from 
 import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
 import Isotope from 'isotope-layout'
+import Lightbox from "yet-another-react-lightbox";
 
 const Home = () => {
   // page content
@@ -41,6 +43,9 @@ const Home = () => {
       });
     });
   }, [])
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   return (
     <>
@@ -323,7 +328,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-1.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="img/project-1.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(0)}} data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -332,7 +337,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-2.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-2.jpg" data-toggle="lightbox" data-gallery="portfolio">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(1)}} data-gallery="portfolio">
                     <FontAwesomeIcon icon={faEye} />
                   </Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#">
@@ -345,7 +350,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-3.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-3.jpg" data-toggle="lightbox" data-gallery="portfolio">
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(2)}} data-gallery="portfolio">
                     <FontAwesomeIcon icon={faEye} />
                   </Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
@@ -356,7 +361,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-4.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-4.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(3)}} data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -365,7 +370,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-5.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-5.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(4)}} data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -374,7 +379,7 @@ const Home = () => {
               <div class="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-6.jpg" alt="" />
                 <div class="portfolio-btn">
-                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" href="/img/project-6.jpg" data-toggle="lightbox" data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
+                  <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1 lightbox-btn" onClick={() => {setOpen(true); setIndex(5)}} data-gallery="portfolio"><FontAwesomeIcon icon={faEye} /></Button>
                   <Button variant="outline-secondary" size="lg-square" className="border-2 mx-1" href="#"><FontAwesomeIcon icon={faLink} /></Button>
                 </div>
               </div>
@@ -383,6 +388,50 @@ const Home = () => {
         </Container>
       </div>
       {/* Projects End */}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={[
+          {
+            src: "/img/project-1.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          },
+          {
+            src: "/img/project-2.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          },
+          {
+            src: "/img/project-3.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          },
+          {
+            src: "/img/project-4.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          },
+          {
+            src: "/img/project-5.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          },
+          {
+            src: "/img/project-6.jpg",
+            alt: "image 1",
+            width: 3840,
+            height: 2560
+          }
+        ]}
+      />
     </>
   )
 }
