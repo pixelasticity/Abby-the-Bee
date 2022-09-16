@@ -19,19 +19,19 @@ const Header = ({ head, description }) => {
         <Container>
           <Row className="g-5 align-items-center">
             <Col lg="6" className="py-6 pb-0 pt-lg-0">
-              <h3 class="text-primary mb-3">I'm</h3>
-              <h1 class="display-3 mb-3">{head}</h1>
-              <h2 class="typed-text-output d-inline">
-                <span class="visually-hidden">Bilingual, friendly, curious, happy</span>
+              <h3 className="text-primary mb-3">I'm</h3>
+              <h1 className="display-3 mb-3">{head}</h1>
+              <h2 className="typed-text-output d-inline">
+                <span className="visually-hidden">Bilingual, friendly, curious, happy</span>
               </h2>
-              <div class="typed-text d-none">{description}</div>
-              <div class="d-flex align-items-center pt-5">
+              <div className="typed-text d-none">{description}</div>
+              <div className="d-flex align-items-center pt-5">
                 <Button href="https://www.amazon.com/Abby-Stays-Home-Stop-Pandemic/dp/B088LKDK8W" className="btn btn-primary py-3 px-4 me-5">Buy Book Now</Button>
-                <button type="button" class="btn-play" data-bs-toggle="modal"
+                <button type="button" className="btn-play" data-bs-toggle="modal"
                   data-src="https://www.youtube.com/embed/bY9IX7lHvs8" onClick={() => handleShow(true)}>
                   <span></span>
                 </button>
-                <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                <h5 className="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
               </div>
             </Col>
             <Col lg="6">
@@ -47,12 +47,12 @@ const Header = ({ head, description }) => {
         <Modal.Header>
           <Modal.Title id="exampleModalLabel">YouTube Video</Modal.Title>
           <Button variant="close" onClick={handleClose} aria-label="Close">
-            <span class="visually-hidden">Close</span>
+            <span className="visually-hidden">Close</span>
           </Button>
         </Modal.Header>
         <Modal.Body>
           <Ratio aspectRatio="16x9">
-            <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="modal video"></iframe>
+            <iframe id="video" className="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="modal video"></iframe>
           </Ratio>
         </Modal.Body>
       </Modal>
