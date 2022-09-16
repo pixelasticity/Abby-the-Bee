@@ -432,6 +432,38 @@ const Home = () => {
           }
         ]}
       />
+
+      {/* Team Start */}
+      <div className="container-xxl py-6 pb-5" id="team">
+        <Container>
+          <Row className="g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6">
+              <h1 className="display-5 mb-0">Author</h1>
+            </Col>
+            <Col lg="6" className="text-lg-end">
+              <Button className="py-3 px-5" href="#">Contact Us</Button>
+            </Col>
+          </Row>
+          <Row className="g-4">
+            <Col lg="4" md="6" className='wow fadeInUp' data-wow-delay="0.1s">
+              <div className="team-item position-relative">
+                <Image fluid className='rounded' src="/img/Sandra-Lena.jpg" alt="Author Sandra Lena" />
+                <div className="team-text bg-white rounded-end p-4">
+                  <div>
+                    <h5>Sandra Lena</h5>
+                    <span>Author &amp; Illustrator</span>
+                  </div>
+                  <FontAwesomeIcon icon={faFeatherPointed} className="fa-2x text-primary" />
+                </div>
+              </div>
+            </Col>
+            <Col lg="8" md="6" className='wow fadeInUp' data-wow-delay="0.1s">
+              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named "Historias de Comienzo" (Stories of beginning), which became a best seller on Amazon for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, "Travel Around the Words" (2016) and "Abby the Bee Stays Home to Stop the Pandemic" (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second book of the series "<cite>Abby the Bee: I am Bee-lingual</cite>".</p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Team End */}
     </>
   )
 }
