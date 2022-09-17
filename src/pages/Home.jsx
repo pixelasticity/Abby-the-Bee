@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
 import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed } from '@fortawesome/free-solid-svg-icons'
 
-import { Waypoint } from 'react-waypoint'
+// import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
 import Isotope from 'isotope-layout'
 import Lightbox from "yet-another-react-lightbox";
