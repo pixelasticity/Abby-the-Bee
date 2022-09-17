@@ -15,6 +15,8 @@ import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
 import Isotope from 'isotope-layout'
 import Lightbox from "yet-another-react-lightbox";
+import { WOW } from 'wowjs';
+import 'animate.css';
 
 const Home = () => {
   // page content
@@ -27,6 +29,8 @@ const Home = () => {
 
   // initialize an Isotope object with configs
   useEffect(() => {
+    new WOW({animateClass: 'animate__animated', live: false}).init();
+
     portfolioIsotope.current = new Isotope('#portfolio-container', {
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
@@ -69,7 +73,7 @@ const Home = () => {
       <div id="about" className="container-xxl py-6">
         <Container>
           <Row className="g-5">
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.1s">
               <div className="d-flex align-items-center mb-5">
                 <div className="years flex-shrink-0 text-center me-4">
                   <h1 className="display-1 mb-0">#1</h1>
@@ -84,7 +88,7 @@ const Home = () => {
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Easy to read and learn from</p>
               <Button variant="primary" className="py-3 px-5 mt-3" href="https://www.amazon.com/Abby-Stays-Home-Stop-Pandemic/dp/B088LKDK8W">Read More</Button>
             </Col>
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.5s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
               <Row className="g-3 mb-4">
                 <Col sm="6">
                   <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic Book Cover"/>
@@ -116,7 +120,7 @@ const Home = () => {
       { /*<div className="container-xxl py-6 pb-5" id="skill">
         <Container>
           <Row className="g-5">
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.1s">
               <h1 className="display-5 mb-5">Skills &amp; Experience</h1>
               <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
               <h3 className="mb-4">My Skills</h3>
@@ -181,7 +185,7 @@ const Home = () => {
                 </Col>
               </Row>
             </Col>
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.5s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
               <Tabs defaultActiveKey="exp" id="test" className="rounded-3 border border-2 border-primary mb-5" variant="pills" justify>
                 <Tab eventKey="exp" className="p-0" title="Experience" tabClassName="w-100 py-3 fs-5">
                   <Row className="gy-5 gx-4">
@@ -249,7 +253,7 @@ const Home = () => {
       {/* Service Start */}
       <Container fluid className="bg-light my-5 py-6" id="service">
         <Container>
-          <Row className="g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          <Row className="g-5 mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
               <h1 className="display-5 mb-0">My Services</h1>
             </Col>
@@ -258,7 +262,7 @@ const Home = () => {
             </Col>
           </Row>
           <Row className="g-4">
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.1s">
               <div className="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
                 <div className="bg-icon flex-shrink-0 mb-3">
                   <FontAwesomeIcon icon={faCropSimple} className="fa-2x text-dark" />
@@ -270,7 +274,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.3s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.3s">
               <div className="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
                 <div className="bg-icon flex-shrink-0 mb-3">
                   <FontAwesomeIcon icon={faCodeBranch} className="fa-2x text-dark" />
@@ -282,7 +286,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.1s">
               <div className="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
                 <div className="bg-icon flex-shrink-0 mb-3">
                 <FontAwesomeIcon icon={faCode} className="fa-2x text-dark" />
@@ -294,7 +298,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col lg="6" className="wow fadeInUp" data-wow-delay="0.3s">
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.3s">
               <div className="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
                 <div className="bg-icon flex-shrink-0 mb-3">
                 <FontAwesomeIcon icon={faLaptopCode} className="fa-2x text-dark" />
@@ -314,7 +318,7 @@ const Home = () => {
       {/* Projects Start */}
       <div className="container-xxl py-6 pt-5" id="project">
         <Container>
-          <Row className="g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+          <Row className="g-5 mb-5 align-items-center wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
               <h1 className="display-5 mb-0">My Projects</h1>
             </Col>
@@ -332,7 +336,7 @@ const Home = () => {
               </ul>
             </Col>
           </Row>
-          <Row id="portfolio-container" className="g-4 wow fadeInUp" data-wow-delay="0.1s">
+          <Row id="portfolio-container" className="g-4 wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="4" md="6" className="portfolio-item first">
               <div className="portfolio-img rounded overflow-hidden">
                 <Image fluid src="/img/project-1.jpg" alt="" />
@@ -445,7 +449,7 @@ const Home = () => {
       {/* Team Start */}
       <div className="container-xxl py-6 pb-5" id="team">
         <Container>
-          <Row className="g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          <Row className="g-5 mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
               <h1 className="display-5 mb-0">Author</h1>
             </Col>
@@ -454,7 +458,7 @@ const Home = () => {
             </Col>
           </Row>
           <Row className="g-4">
-            <Col lg="4" md="6" className='wow fadeInUp' data-wow-delay="0.1s">
+            <Col lg="4" md="6" className='wow animate__fadeInUp' data-wow-delay="0.1s">
               <div className="team-item position-relative">
                 <Image fluid className='rounded' src="/img/Sandra-Lena.jpg" alt="Author Sandra Lena" />
                 <div className="team-text bg-white rounded-end p-4">
@@ -466,7 +470,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col lg="8" md="6" className='wow fadeInUp' data-wow-delay="0.1s">
+            <Col lg="8" md="6" className='wow animate__fadeInUp' data-wow-delay="0.1s">
               <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named "Historias de Comienzo" (Stories of beginning), which became a best seller on Amazon for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, "Travel Around the Words" (2016) and "Abby the Bee Stays Home to Stop the Pandemic" (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second book of the series "<cite>Abby the Bee: I am Bee-lingual</cite>".</p>
             </Col>
           </Row>
