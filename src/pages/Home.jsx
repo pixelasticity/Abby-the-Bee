@@ -51,6 +51,9 @@ const Home = () => {
     <>
       <style type="text/css">
         {`
+        :root {
+          --bs-link-color: var(--bs-primary)
+        }
         .btn-primary,
         .nav-pills .nav-link.active {
           background-color: var(--bs-primary);
