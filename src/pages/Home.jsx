@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 // Components
 import Header from '../components/Header'
 import Meta from '../components/Meta'
@@ -20,29 +20,29 @@ const Home = () => {
   // page content
   const pageTitle = 'Abby the Bee'
   const pageDescription = 'a bilingual children’s book series for early readers'
+  // init a ref to store the future isotope object
+  const portfolioIsotope = useRef()
+  // store the filter keyword in a state
+  const [portfolioFilterKey, setPortfolioFilterKey] = useState('*');
 
+  // initialize an Isotope object with configs
   useEffect(() => {
-    var portfolioIsotope = new Isotope('#portfolio-container', {
+    portfolioIsotope.current = new Isotope('#portfolio-container', {
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
     });
-    const filters = document.querySelectorAll('#portfolio-flters li');
-    const filterItems = [].slice.call(filters);
-  
-    filterItems.forEach(function (item) {
-      item.addEventListener('click', function () {
-        filterItems.forEach(function (item) {
-          item.classList.remove('active');
-        });
-        this.classList.add('active');
-        
-        var filterValue = this.getAttribute('data-filter');
-        portfolioIsotope.arrange({
-          filter: filterValue
-        });
-      });
-    });
+    // cleanup
+    return () => portfolioIsotope.current.destroy()
   }, [])
+
+  useEffect(() => {
+    if (portfolioIsotope) {
+      portfolioFilterKey === '*' ? portfolioIsotope.current.arrange({filter: `*`})
+        : portfolioIsotope.current.arrange({filter: `.${portfolioFilterKey}`})
+    }
+  }, [portfolioIsotope, portfolioFilterKey])
+
+  const handleFilterKeyChange = key => () => setPortfolioFilterKey(key)
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -317,9 +317,15 @@ const Home = () => {
             </Col>
             <Col lg="6" className="text-lg-end">
               <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
-                <li className="mx-3 active" data-filter="*">All Projects</li>
-                <li className="mx-3" data-filter=".first">UI/UX Design</li>
-                <li className="mx-3" data-filter=".second">Graphic Design</li>
+                <li className="mx-3 active" data-filter="*">
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('*')}>All Projects</Button>
+                </li>
+                <li className="mx-3" data-filter=".first">
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>UI/UX Design</Button>
+                </li>
+                <li className="mx-3" data-filter=".second">
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>Graphic Design</Button>
+                </li>
               </ul>
             </Col>
           </Row>
