@@ -324,19 +324,29 @@ body {
 
 
 /*** Project Portfolio ***/
-#portfolio-flters li {
-  display: inline-block;
-  font-weight: 500;
-  color: var(--bs-dark);
-  cursor: pointer;
-  transition: .5s;
-  border-bottom: 2px solid transparent;
-}
+#portfolio-flters {
+  li {
+    display: inline-block;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
 
-#portfolio-flters li:hover,
-#portfolio-flters li.active {
-  color: var(--bs-primary);
-  border-color: var(--bs-primary);
+    button {
+      font-weight: 500;
+      color: var(--bs-dark);
+      cursor: pointer;
+
+      
+    }
+
+    &:hover,
+    &.active {
+      border-color: var(--bs-primary);
+
+      button {
+        color: var(--bs-primary);
+      }
+    }
+  }
 }
 
 .portfolio-img {
