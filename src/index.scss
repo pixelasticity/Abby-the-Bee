@@ -33,7 +33,7 @@
 // @import "~bootstrap/scss/modal"; // Error?
 // @import "~bootstrap/scss/tooltip";
 // @import "~bootstrap/scss/popover";
-// @import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/spinners";
 // @import "~bootstrap/scss/offcanvas";
 @import "~bootstrap/scss/placeholders";
@@ -461,58 +461,64 @@ body {
   right: 10%;
 }
 
-.testimonial-carousel .owl-item img {
-  width: 120px;
-  height: 120px;
-}
-
-.testimonial-carousel .testimonial-icon {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 50%;
-  bottom: -15px;
-  transform: translateX(-50%);
+.testimonial-carousel {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border: 1px solid var(--bs-secondary);
-  border-radius: 60px;
-}
+  flex-direction: column-reverse;
 
-.testimonial-carousel .owl-dots {
-  height: 40px;
-  margin-top: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .testimonial-item {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
 
-.testimonial-carousel .owl-dot {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border: 2px solid var(--bs-secondary);
-  border-radius: 30px;
-  transition: .5s;
-}
+  .testimonial-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid var(--bs-secondary);
+    border-radius: 50%;
+  }
 
-.testimonial-carousel .owl-dot::after {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  top: 5px;
-  left: 5px;
-  border-radius: 16px;
-  background: var(--bs-secondary);
-  transition: .5s;
-}
+  .carousel-indicators {
+    position: static;
+    height: 40px;
+    margin-top: 25px;
+    align-items: center;
 
-.testimonial-carousel .owl-dot.active::after {
-  background: var(--bs-primary);
+    button {
+      position: relative;
+      display: inline-block;
+      margin: 0 5px;
+      width: 30px;
+      height: 30px;
+      background: #FFFFFF;
+      border: 1px solid var(--bs-secondary);
+      border-radius: 30px;
+      transition: .5s;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 22px;
+        height: 22px;
+        top: 4px;
+        left: 4px;
+        border-radius: 50%;
+        background: var(--bs-secondary);
+        transition: .5s;
+      }
+
+      &.active::after {
+        background: var(--bs-primary);
+      }
+    }
+  }
 }

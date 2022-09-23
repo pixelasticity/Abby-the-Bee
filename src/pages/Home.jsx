@@ -7,9 +7,10 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
+import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee } from '@fortawesome/free-brands-svg-icons'
-import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed } from '@fortawesome/free-solid-svg-icons'
+import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 // import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
@@ -482,6 +483,70 @@ const Home = () => {
         </Container>
       </div>
       {/* Team End */}
+
+      {/* Testimonial Start */}
+      <Container fluid id="testimonial" className="bg-light py-5 my-5">
+        <Container fluid className="py-5">
+          <h1 className="display-5 text-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+          <Row className="justify-content-center">
+            <Col lg="3" className="d-none d-lg-block">
+              <div className="testimonial-left h-100">
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.1s" src="/img/abby-testimonial-2.png" alt="Abby the Bee children's book testimonial" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.3s" src="/img/abby-testimonial-4.png" alt="Abby the Bee kids' book review" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.5s" src="/img/abby-testimonial-3.png" alt="" />
+              </div>
+            </Col>
+            <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
+              <Carousel className="testimonial-carousel">
+                <Carousel.Item className="testimonial-item text-center">
+                  <div className="position-relative mb-5">
+                    <Image fluid className="rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="Nick from Los Angeles reviews Abby the Bee books" />
+                    <div className="testimonial-icon">
+                      <FontAwesomeIcon icon={faQuoteLeft} className="text-primary" />
+                    </div>
+                  </div>
+                  <p className="fs-5 fst-italic">Entertaining, bilingual, easy to read, adorable bee character, helps explain the pandemic to young readers. A definite must for your child’s library!</p>
+                  <hr className="w-25 mx-auto" />
+                  <h5>Nick</h5>
+                  <span>Los Angeles, California</span>
+                </Carousel.Item>
+                <Carousel.Item className="testimonial-item text-center">
+                  <div className="position-relative mb-5">
+                    <Image fluid className="rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="Mari from Madrid reviews Abby the Bee books" />
+                    <div className="testimonial-icon">
+                      <FontAwesomeIcon icon={faQuoteLeft} className="text-primary" />
+                    </div>
+                  </div>
+                  <p className="fs-5 fst-italic">La abeja es super mona, y el libro es muy sencillo de leer.</p>
+                  <hr className="w-25 mx-auto" />
+                  <h5>Mari</h5>
+                  <span>Madrid, Spain</span>
+                </Carousel.Item>
+                <Carousel.Item className="testimonial-item text-center">
+                  <div className="position-relative mb-5">
+                    <Image fluid className="rounded-circle border border-secondary p-2 mx-auto" src="/img/testimonial-3.jpg" alt="" />
+                    <div className="testimonial-icon">
+                      <FontAwesomeIcon icon={faQuoteLeft} className="text-primary" />
+                    </div>
+                  </div>
+                  <p className="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                  <hr className="w-25 mx-auto" />
+                  <h5>Client Name</h5>
+                  <span>Profession</span>
+                </Carousel.Item>
+              </Carousel>
+            </Col>
+            <Col lg="3" className="d-none d-lg-block">
+              <div className="testimonial-right h-100">
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.1s" src="/img/abby-testimonial-4.jpg" alt="" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.3s" src="/img/abby-testimonial-5.jpg" alt="" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.5s" src="/img/abby-testimonial-6.jpg" alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      {/* Testimonial End */}
     </>
   )
 }
