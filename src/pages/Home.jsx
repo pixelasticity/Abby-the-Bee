@@ -8,8 +8,10 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import Carousel from 'react-bootstrap/Carousel';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faForumbee } from '@fortawesome/free-brands-svg-icons'
+import { faForumbee, faTwitter, faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 // import { Waypoint } from 'react-waypoint'
@@ -18,6 +20,7 @@ import Isotope from 'isotope-layout'
 import Lightbox from "yet-another-react-lightbox";
 import { WOW } from 'wowjs';
 import 'animate.css';
+import autosize from 'autosize';
 
 const Home = () => {
   // page content
@@ -56,6 +59,23 @@ const Home = () => {
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
+  useEffect(() => {
+    const ta = document.querySelector('textarea');
+    autosize(ta)
+  })
 
   return (
     <>
@@ -547,6 +567,81 @@ const Home = () => {
         </Container>
       </Container>
       {/* Testimonial End */}
+
+      {/* Contact Start */}
+      <div id="contact" className="container-xxl pb-5">
+        <Container className="py-5">
+          <Row className="g-5 mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+            <Col lg="6">
+              <h1 className="display-5 mb-0">I'd 💗 to hear from you</h1>
+            </Col>
+            <Col lg="6" className="text-lg-end">
+              <Button className="py-3 px-5">Say Hello</Button>
+            </Col>
+          </Row>
+          <Row class="g-5">
+            <Col class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.1s">
+              <p class="mb-2">My office:</p>
+              <h3 class="fw-bold">Los Angeles, USA</h3>
+              <hr class="w-100" />
+              <p class="mb-2">Email me:</p>
+              <h3 class="fw-bold">info@abbythebee.com</h3>
+              <hr class="w-100" />
+              <p class="mb-2">Inquiries:</p>
+              <h3 class="fw-bold">press@abbythebee.com</h3>
+              <hr class="w-100" />
+              <p class="mb-2">Follow me:</p>
+              <div class="d-flex pt-2">
+                <Button className="btn-square me-2" href="https://twitter.com/">
+                  <FontAwesomeIcon icon={faTwitter} />
+                </Button>
+                <Button className="btn-square me-2" href="https://www.facebook.com/">
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </Button>
+                <Button className="btn-square me-2" href="https://www.youtube.com/">
+                  <FontAwesomeIcon icon={faYoutube} />
+                </Button>
+                <Button className="btn-square me-2" href="https://www.linkedin.com/">
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </Button>
+              </div>
+            </Col>
+            <Col md="6" class="wow animate__fadeInUp" data-wow-delay="0.5s">
+              <p class="mb-4">If you would like your experience reading <cite>Abby the Bee</cite> to be featured in the testimonial section, send me a quick note, and how you would like your name to appear. Then you will appear on the website!</p>
+              <Form name="contact" noValidate validated={validated} onSubmit={handleSubmit} data-netlify="true">
+                <div class="row g-3">
+                  <Col md="6">
+                    <FloatingLabel controlId="name" label="Your Name">
+                      <Form.Control type="text" placeholder="David Cruz" />
+                    </FloatingLabel>
+                  </Col>
+                  <Col md="6">
+                    <FloatingLabel controlId="email" label="Your Email">
+                      <Form.Control type="email" placeholder="name@example.com" required />
+                      <Form.Control.Feedback type="invalid">Please provide a valid e-mail address.</Form.Control.Feedback>
+                    </FloatingLabel>
+                  </Col>
+                  <Col xs={12}>
+                    <FloatingLabel controlId="subject" label="Subject">
+                      <Form.Control type="text" placeholder="RE: I love Abby the Bee!" />
+                    </FloatingLabel>
+                  </Col>
+                  <Col xs={12}>
+                    <FloatingLabel controlId="message" label="Message">
+                      <Form.Control as="textarea" placeholder="Leave a message here" maxlength="640" required rows={1} style={{minHeight: '58px', resize: 'none'}} />
+                      <Form.Control.Feedback type="invalid">Oops! You forgot to write a message.</Form.Control.Feedback>
+                    </FloatingLabel>
+                  </Col>
+                  <Col xs={12}>
+                    <Button className="py-3 px-5" type="submit">Send Message</Button>
+                  </Col>
+                </div>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Contact End */}
     </>
   )
 }
