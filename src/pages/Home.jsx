@@ -538,9 +538,9 @@ const Home = () => {
             </Col>
             <Col lg="3" className="d-none d-lg-block">
               <div className="testimonial-right h-100">
-                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.1s" src="/img/abby-testimonial-4.jpg" alt="" />
-                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.3s" src="/img/abby-testimonial-5.jpg" alt="" />
-                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.5s" src="/img/abby-testimonial-6.jpg" alt="" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.1s" src="/img/abby-testimonial-4.png" alt="" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.3s" src="/img/abby-testimonial-5.png" alt="" />
+                <Image fluid className="wow animate__fadeIn" data-wow-delay="0.5s" src="/img/abby-testimonial-6.png" alt="" />
               </div>
             </Col>
           </Row>
