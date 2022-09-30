@@ -590,8 +590,8 @@ const Home = () => {
               <p class="mb-2">Inquiries:</p>
               <h3 class="fw-bold">press@abbythebee.com</h3>
               <hr class="w-100" />
-              <p class="mb-2">Follow me:</p>
-              <div class="d-flex pt-2">
+              <p class="mb-2 d-none">Follow me:</p>
+              <div class="d-flex d-none pt-2">
                 <Button className="btn-square me-2" href="https://twitter.com/">
                   <FontAwesomeIcon icon={faTwitter} />
                 </Button>
