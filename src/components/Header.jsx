@@ -27,11 +27,11 @@ const Header = ({ head, description }) => {
               <div className="typed-text d-none">{description}</div>
               <div className="d-flex align-items-center pt-5">
                 <Button href="https://www.amazon.com/Abby-Stays-Home-Stop-Pandemic/dp/B088LKDK8W" className="btn btn-primary py-3 px-4 me-5">Buy Book Now</Button>
-                <button type="button" className="btn-play" data-bs-toggle="modal"
+                {/* <button type="button" className="btn-play" data-bs-toggle="modal"
                   data-src="https://www.youtube.com/embed/bY9IX7lHvs8" onClick={() => handleShow(true)}>
                   <span></span>
                 </button>
-                <h5 className="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                <h5 className="ms-4 mb-0 d-none d-sm-block">Play Video</h5> */}
               </div>
             </Col>
             <Col lg="6">

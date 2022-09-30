@@ -277,7 +277,7 @@ const Home = () => {
       {/* Expertise End */}
 
       {/* Service Start */}
-      <Container fluid className="bg-light my-5 py-6" id="service">
+      <Container fluid className="bg-light my-5 py-6 d-none" id="service">
         <Container>
           <Row className="g-5 mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
