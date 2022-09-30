@@ -351,13 +351,13 @@ const Home = () => {
             <Col lg="6" className="text-lg-end">
               <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
                 <li className="mx-3 active" data-filter="*">
-                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('*')}>All Projects</Button>
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('*')}>All Products</Button>
                 </li>
                 <li className="mx-3" data-filter=".first">
-                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('first')}>UI/UX Design</Button>
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('first')}>Adult</Button>
                 </li>
                 <li className="mx-3" data-filter=".second">
-                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>Graphic Design</Button>
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>Kids</Button>
                 </li>
               </ul>
             </Col>
