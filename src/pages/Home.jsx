@@ -346,7 +346,7 @@ const Home = () => {
         <Container>
           <Row className="g-5 mb-5 align-items-center wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
-              <h1 className="display-5 mb-0">My Projects</h1>
+              <h1 className="display-5 mb-0">Abby Gear</h1>
             </Col>
             <Col lg="6" className="text-lg-end">
               <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
