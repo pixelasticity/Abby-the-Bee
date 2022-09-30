@@ -354,7 +354,7 @@ const Home = () => {
                   <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('*')}>All Projects</Button>
                 </li>
                 <li className="mx-3" data-filter=".first">
-                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>UI/UX Design</Button>
+                  <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('first')}>UI/UX Design</Button>
                 </li>
                 <li className="mx-3" data-filter=".second">
                   <Button variant="link" className="p-0 text-decoration-none" onClick={handleFilterKeyChange('second')}>Graphic Design</Button>
