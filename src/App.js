@@ -8,6 +8,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(process.env.GA4_ID);
+ReactGA.send("pageview");
+
 const App = () => {
   return (
     <Layout>
