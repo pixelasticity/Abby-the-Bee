@@ -10,8 +10,10 @@ import NotFound from "./pages/NotFound";
 
 import ReactGA from "react-ga4";
 
-ReactGA.initialize(process.env.GA4_ID);
-ReactGA.send("pageview");
+if (process.env.GA4_ID) {
+  ReactGA.initialize(process.env.GA4_ID);
+  ReactGA.send("pageview");
+}
 
 const App = () => {
   return (
