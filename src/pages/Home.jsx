@@ -133,7 +133,7 @@ const Home = () => {
               <div className="d-flex align-items-center mb-3">
                 <h5 className="border-end pe-3 me-3 mb-0">I'm Bee-lingual</h5>
                 <h2 className="text-primary fw-bold mb-0">
-                  <CountUp start={1980} end={2022} delay={0} enableScrollSpy={true} redraw />
+                  <CountUp start={1980} end={2023} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
               <p className="mb-0">Abby makes a new friend at the beach and shows him what it is to know two languages. They play together while learning words in English and Spanish.</p>
