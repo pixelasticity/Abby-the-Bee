@@ -29,7 +29,7 @@ const Home = () => {
   // init a ref to store the future isotope object
   const portfolioIsotope = useRef()
   // store the filter keyword in a state
-  const [portfolioFilterKey, setPortfolioFilterKey] = useState('*');
+  const [portfolioFilterKey] = useState('*');
 
   // initialize an Isotope object with configs
   useEffect(() => {
