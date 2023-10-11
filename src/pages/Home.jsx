@@ -12,7 +12,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee, faTwitter, faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 // import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
@@ -55,10 +55,10 @@ const Home = () => {
     }
   }, [portfolioIsotope, portfolioFilterKey])
 
-  const handleFilterKeyChange = key => () => setPortfolioFilterKey(key)
+  // const handleFilterKeyChange = key => () => setPortfolioFilterKey(key)
 
   const [open, setOpen] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [index] = useState(0);
 
   const [validated, setValidated] = useState(false);
 
