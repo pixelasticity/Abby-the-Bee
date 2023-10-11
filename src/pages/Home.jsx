@@ -12,7 +12,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForumbee, faTwitter, faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCropSimple, faCodeBranch, faCode, faLaptopCode, faEye, faLink, faFeatherPointed, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 // import { Waypoint } from 'react-waypoint'
 import CountUp from 'react-countup'
@@ -29,7 +29,7 @@ const Home = () => {
   // init a ref to store the future isotope object
   const portfolioIsotope = useRef()
   // store the filter keyword in a state
-  const [portfolioFilterKey] = useState('*');
+  const [portfolioFilterKey, setPortfolioFilterKey] = useState('*');
 
   // initialize an Isotope object with configs
   useEffect(() => {
@@ -55,10 +55,10 @@ const Home = () => {
     }
   }, [portfolioIsotope, portfolioFilterKey])
 
-  // const handleFilterKeyChange = key => () => setPortfolioFilterKey(key)
+  const handleFilterKeyChange = key => () => setPortfolioFilterKey(key)
 
   const [open, setOpen] = useState(false);
-  const [index] = useState(0);
+  const [index, setIndex] = useState(0);
 
   const [validated, setValidated] = useState(false);
 
