@@ -29,7 +29,7 @@ $__typed-pauses-chars: (fwd: "\200b", bwd: "\200c", both: "\feff");
 			+ $dur-full-gap
 			+ $dur-char-bwd * ($char-nth - $fwd-length);
 	}
-	@return calc($time / $dur-total * 100 + $modifier) + "%";
+	@return ($time / $dur-total * 100 + $modifier) + "%";
 }
 @function __typed-get-all-keys($lists...) {
 	$all-keys: ();
