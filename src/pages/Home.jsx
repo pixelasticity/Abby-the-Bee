@@ -117,10 +117,10 @@ const Home = () => {
             <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
               <Row className="g-3 mb-4">
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic Book Cover"/>
+                  <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic book cover"/>
                 </Col>
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/about-2.jpg" alt="" />
+                  <Image fluid className="rounded" src="/img/Abby_the_Bee_makes_a_friend_at_the_beach_cover.jpg" alt="Abby the Bee Makes a Friend at the Beach book cover" />
                 </Col>
               </Row>
               <div className="d-flex align-items-center mb-3">
@@ -131,12 +131,12 @@ const Home = () => {
               </div>
               <p className="mb-4">Abby loves going to school and playing in the park with other bees, but a pandemic is spreading around the world and schools and parks are closed. Abby learns to have fun staying at home and how to help so less bees get sick.</p>
               <div className="d-flex align-items-center mb-3">
-                <h5 className="border-end pe-3 me-3 mb-0">I'm Bee-lingual</h5>
+                <h5 className="border-end pe-3 me-3 mb-0">Makes a Friend at the Beach</h5>
                 <h2 className="text-primary fw-bold mb-0">
                   <CountUp start={1980} end={2023} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
-              <p className="mb-0">Abby makes a new friend at the beach and shows him what it is to know two languages. They play together while learning words in English and Spanish.</p>
+              <p className="mb-0">Abby the Bee makes a new friend and shows him how fun it is to be bilingual. Abby and her friend learn new vocabulary by playing using words in English and Spanish.</p>
             </Col>
           </Row>
         </Container>
