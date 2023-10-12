@@ -480,7 +480,7 @@ const Home = () => {
               <h1 className="display-5 mb-0">Author</h1>
             </Col>
             <Col lg="6" className="text-lg-end">
-              <Button className="py-3 px-5" href="#">Contact Us</Button>
+              <Button className="py-3 px-5" href="#contact">Contact Us</Button>
             </Col>
           </Row>
           <Row className="g-4">
