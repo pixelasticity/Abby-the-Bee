@@ -549,10 +549,10 @@ const Home = () => {
                       <FontAwesomeIcon icon={faQuoteLeft} className="text-primary" />
                     </div>
                   </div>
-                  <p className="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                  <p className="fs-5 fst-italic">My 2 and 4 year olds enjoyed this book. I enjoyed that it was in Spanish and English.</p>
                   <hr className="w-25 mx-auto" />
-                  <h5>Client Name</h5>
-                  <span>Profession</span>
+                  <h5>Busy Mom</h5>
+                  <span>Los Angeles, CA</span>
                 </Carousel.Item>
               </Carousel>
             </Col>
