@@ -131,7 +131,7 @@ const Home = () => {
               </div>
               <p className="mb-4">Abby loves going to school and playing in the park with other bees, but a pandemic is spreading around the world and schools and parks are closed. Abby learns to have fun staying at home and how to help so less bees get sick.</p>
               <div className="d-flex align-items-center mb-3">
-                <h5 className="border-end pe-3 me-3 mb-0">I'm Bee-lingual</h5>
+                <h5 className="border-end pe-3 me-3 mb-0">Makes a Friend at the Beach</h5>
                 <h2 className="text-primary fw-bold mb-0">
                   <CountUp start={1980} end={2023} delay={0} enableScrollSpy={true} redraw />
                 </h2>
@@ -497,7 +497,7 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="8" md="6" className='d-flex align-items-center wow animate__fadeInUp' data-wow-delay="0.1s">
-              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named <cite>Historias de Comienzo</cite> (Stories of beginning), which became a best seller on Amazon Spain for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, <cite>Travel Around the Words</cite> (2016) and <cite>Abby the Bee Stays Home to Stop the Pandemic</cite> (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Learns She is Bilingual</cite>.</p>
+              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named <cite>Historias de Comienzo</cite> (Stories of beginning), which became a best seller on Amazon Spain for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, <cite>Travel Around the Words</cite> (2016) and <cite>Abby the Bee Stays Home to Stop the Pandemic</cite> (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Makes a Friend at the Beach</cite>.</p>
             </Col>
           </Row>
         </Container>
