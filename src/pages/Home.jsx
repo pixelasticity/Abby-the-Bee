@@ -120,7 +120,7 @@ const Home = () => {
                   <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic book cover"/>
                 </Col>
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/Abby_the_Bee_makes_a_friend_at_the_beach_cover.jpg" alt="Abby the Bee Makes a Friend at the Beach book cover" />
+                  <Image fluid className="rounded" src="/img/Abby_makes_a_friend_at_the_beach_cover_front.jpg" alt="Abby the Bee Makes a Friend at the Beach book cover" />
                 </Col>
               </Row>
               <div className="d-flex align-items-center mb-3">
@@ -277,7 +277,7 @@ const Home = () => {
       {/* Expertise End */}
 
       {/* Service Start */}
-      {/* <Container fluid className="bg-light my-5 py-6 d-none" id="service">
+      <Container fluid className="bg-light my-5 py-6 d-none" id="service">
         <Container>
           <Row className="g-5 mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
@@ -338,11 +338,11 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </Container> */}
+      </Container>
       {/* Service End */}
 
       {/* Projects Start */}
-      {/* <div className="container-xxl py-6 pt-5" id="project">
+      <div className="container-xxl py-6 pt-5 d-none" id="project">
         <Container>
           <Row className="g-5 mb-5 align-items-center wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
@@ -425,7 +425,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
       {/* Projects End */}
 
       <Lightbox
@@ -480,7 +480,7 @@ const Home = () => {
               <h1 className="display-5 mb-0">Author</h1>
             </Col>
             <Col lg="6" className="text-lg-end">
-              <Button className="py-3 px-5" href="#">Contact Us</Button>
+              <Button className="py-3 px-5" href="#contact">Contact Us</Button>
             </Col>
           </Row>
           <Row className="g-4">
@@ -497,7 +497,7 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="8" md="6" className='d-flex align-items-center wow animate__fadeInUp' data-wow-delay="0.1s">
-              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named <cite>Historias de Comienzo</cite> (Stories of beginning), which became a best seller on Amazon Spain for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, <cite>Travel Around the Words</cite> (2016) and <cite>Abby the Bee Stays Home to Stop the Pandemic</cite> (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Learns She is Bilingual</cite>.</p>
+              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named <cite>Historias de Comienzo</cite> (Stories of beginning), which became a best seller on Amazon Spain for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, <cite>Travel Around the Words</cite> (2016) and <cite>Abby the Bee Stays Home to Stop the Pandemic</cite> (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Makes a Friend at the Beach</cite>.</p>
             </Col>
           </Row>
         </Container>
@@ -549,10 +549,10 @@ const Home = () => {
                       <FontAwesomeIcon icon={faQuoteLeft} className="text-primary" />
                     </div>
                   </div>
-                  <p className="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                  <p className="fs-5 fst-italic">My 2 and 4 year olds enjoyed this book. I enjoyed that it was in Spanish and English.</p>
                   <hr className="w-25 mx-auto" />
-                  <h5>Client Name</h5>
-                  <span>Profession</span>
+                  <h5>Busy Mom</h5>
+                  <span>Los Angeles, CA</span>
                 </Carousel.Item>
               </Carousel>
             </Col>
