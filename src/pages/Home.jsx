@@ -120,7 +120,7 @@ const Home = () => {
                   <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic Book Cover"/>
                 </Col>
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/about-2.jpg" alt="" />
+                  <Image fluid className="rounded" src="/img/Abby_makes_a_friend_at_the_beach_cover_front.jpg" alt="" />
                 </Col>
               </Row>
               <div className="d-flex align-items-center mb-3">
