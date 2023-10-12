@@ -342,7 +342,7 @@ const Home = () => {
       {/* Service End */}
 
       {/* Projects Start */}
-      <div className="container-xxl py-6 pt-5" id="project">
+      <div className="container-xxl py-6 pt-5 d-none" id="project">
         <Container>
           <Row className="g-5 mb-5 align-items-center wow animate__fadeInUp" data-wow-delay="0.1s">
             <Col lg="6">
