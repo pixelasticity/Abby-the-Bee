@@ -112,7 +112,7 @@ const Home = () => {
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Best for ages 3 through 8</p>
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Stories in English &amp; Spanish</p>
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Easy to read and learn from</p>
-              <Button variant="primary" className="py-3 px-5 mt-3" href="https://www.amazon.com/Abby-Stays-Home-Stop-Pandemic/dp/B088LKDK8W">Read More</Button>
+              <Button variant="primary" className="py-3 px-5 mt-3" href="https://www.amazon.com/Abby-makes-friend-beach-Abeja/dp/B0CH2FX59P/ref=sr_1_1">Read More</Button>
             </Col>
             <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
               <Row className="g-3 mb-4">
