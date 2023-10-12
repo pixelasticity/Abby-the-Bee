@@ -136,7 +136,7 @@ const Home = () => {
                   <CountUp start={1980} end={2023} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
-              <p className="mb-0">Abby makes a new friend at the beach and shows him what it is to know two languages. They play together while learning words in English and Spanish.</p>
+              <p className="mb-0">Abby the Bee makes a new friend and shows him how fun it is to be bilingual. Abby and her friend learn new vocabulary by playing using words in English and Spanish.</p>
             </Col>
           </Row>
         </Container>
