@@ -116,10 +116,10 @@ const Home = () => {
             <Col lg="6" className="wow animate__fadeInUp" data-wow-delay="0.5s">
               <Row className="g-3 mb-4">
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic book cover"/>
+                  <a href="https://amzn.to/45U7Ksm"><Image fluid className="rounded" src="/img/Abby_the_bee_cover.png" alt="Abby the Bee Stays Home to Stop the Pandemic book cover"/></a>
                 </Col>
                 <Col sm="6">
-                  <Image fluid className="rounded" src="/img/Abby_makes_a_friend_at_the_beach_cover_front.jpg" alt="Abby the Bee Makes a Friend at the Beach book cover" />
+                  <a href="https://amzn.to/3QPqQf7"><Image fluid className="rounded" src="/img/Abby_makes_a_friend_at_the_beach_cover_front.jpg" alt="Abby the Bee Makes a Friend at the Beach book cover" /></a>
                 </Col>
               </Row>
               <div className="d-flex align-items-center mb-3">
