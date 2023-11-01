@@ -575,7 +575,7 @@ const Home = () => {
               <h1 className="display-5 mb-0">I'd 💗 to hear from you</h1>
             </Col>
             <Col lg="6" className="text-lg-end">
-              <Button className="py-3 px-5">Say Hello</Button>
+              <Button className="py-3 px-5" href="#contact">Say Hello</Button>
             </Col>
           </Row>
           <Row class="g-5">
