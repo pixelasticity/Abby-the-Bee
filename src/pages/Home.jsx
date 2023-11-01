@@ -107,9 +107,8 @@ const Home = () => {
                 </div>
                 <h3 className="lh-base mb-0">bilingual picture books for early readers </h3>
               </div>
-              <p className="mb-4"><cite>Abby the Bee</cite> is a series of bilingual books to help children navigate speaking both English and Spanish. These books tells you the story in the two languages and it also teaches childrens words. This is perfect for them to find joy in learning at the same time they enjoy a greaat reading
-              .</p>
-              <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Best for ages 3 through 8</p>
+              <p className="mb-4"><cite>Abby the Bee</cite> is a series of bilingual books to help children navigate speaking both English and Spanish. These books tell stories in the two languages, while teaching children new words. Abby’s adventures help kids find joy in reading and learning.</p>
+              <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Best for ages 3 through 7</p>
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Stories in English &amp; Spanish</p>
               <p className="mb-3"><FontAwesomeIcon icon={faForumbee} className="text-primary me-3" />Easy to read and learn from</p>
               <Button variant="primary" className="py-3 px-5 mt-3" href="https://www.amazon.com/Abby-makes-friend-beach-Abeja/dp/B0CH2FX59P/ref=sr_1_1">Read More</Button>
@@ -129,7 +128,7 @@ const Home = () => {
                   <CountUp start={1980} end={2020} delay={0} enableScrollSpy={true} redraw />
                 </h2>
               </div>
-              <p className="mb-4">Abby loves going to school and playing in the park with other bees, but a pandemic is spreading around the world and schools and parks are closed. Abby learns to have fun staying at home and how to help so less bees get sick.</p>
+              <p className="mb-4">Abby loves going to school and playing in the park with other bees, but a pandemic is spreading around the world and schools and parks are closed. Abby learns how to have fun at home and how to help so fewer bees get sick.</p>
               <div className="d-flex align-items-center mb-3">
                 <h5 className="border-end pe-3 me-3 mb-0">Makes a Friend at the Beach</h5>
                 <h2 className="text-primary fw-bold mb-0">
@@ -497,7 +496,7 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="8" md="6" className='d-flex align-items-center wow animate__fadeInUp' data-wow-delay="0.1s">
-              <p>Sandra Lena is a bilingual, passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a>. While studying in college and acting in a Spanish television show, she self-published her first book in 2013, a young adult book named <cite>Historias de Comienzo</cite> (Stories of beginning), which became a best seller on Amazon Spain for several weeks. With dual Bachelor's degrees in Journalism and Audiovisual Media, she moved to Los Angeles to perfect her English. In the past decade, she has worked in the entertainment industry and self-published two bilingual children's books, <cite>Travel Around the Words</cite> (2016) and <cite>Abby the Bee Stays Home to Stop the Pandemic</cite> (2020). She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change by starting a series of children's books featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Makes a Friend at the Beach</cite>.</p>
+              <p><a href="https://sandralena.com/" target="_blank">Sandra Lena</a> is a passionate writer born in <a href="https://www.spain.info/gcc/en/" target="_blank" rel="noreferrer">Spain</a> and based in Los Angeles. She published her first book in 2013, <cite>Historias de Comienzo</cite> (Stories of Beginning), while studying in college and working in the entertainment industry. The book was a best-seller in Spain for several weeks. More recently, she has focused her writing on bilingual children's books. She noticed a lack of bilingual books for early readers that were educational and entertaining. She made it her personal mission to be part of the change. She has created a series featuring a bee named Abby. She just completed her second installment in the series <cite>Abby the Bee Makes a Friend at the Beach</cite>.</p>
             </Col>
           </Row>
         </Container>
