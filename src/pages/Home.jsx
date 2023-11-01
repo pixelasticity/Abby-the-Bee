@@ -591,16 +591,16 @@ const Home = () => {
               <hr class="w-100" />
               <p class="mb-2 d-none">Follow me:</p>
               <div class="d-flex d-none pt-2">
-                <Button className="btn-square me-2" href="https://twitter.com/">
+                <Button className="btn-square me-2" href="https://twitter.com/abbythebee">
                   <FontAwesomeIcon icon={faTwitter} />
                 </Button>
-                <Button className="btn-square me-2" href="https://www.facebook.com/">
+                <Button className="btn-square me-2" href="https://www.facebook.com/abbythebee">
                   <FontAwesomeIcon icon={faFacebookF} />
                 </Button>
-                <Button className="btn-square me-2" href="https://www.youtube.com/">
+                <Button className="btn-square me-2" href="https://www.youtube.com/abbythebee">
                   <FontAwesomeIcon icon={faYoutube} />
                 </Button>
-                <Button className="btn-square me-2" href="https://www.linkedin.com/">
+                <Button className="btn-square me-2" href="https://www.linkedin.com/sandralena">
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Button>
               </div>
