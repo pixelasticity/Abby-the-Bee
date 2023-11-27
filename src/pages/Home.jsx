@@ -612,23 +612,23 @@ const Home = () => {
                 <div class="row g-3">
                   <Col md="6">
                     <FloatingLabel controlId="name" label="Your Name">
-                      <Form.Control type="text" placeholder="Sandra Lena" />
+                      <Form.Control name="name" type="text" placeholder="Sandra Lena" />
                     </FloatingLabel>
                   </Col>
                   <Col md="6">
                     <FloatingLabel controlId="email" label="Your Email">
-                      <Form.Control type="email" placeholder="name@example.com" required />
+                      <Form.Control name="email" type="email" placeholder="name@example.com" required />
                       <Form.Control.Feedback type="invalid">Please provide a valid e-mail address.</Form.Control.Feedback>
                     </FloatingLabel>
                   </Col>
                   <Col xs={12}>
                     <FloatingLabel controlId="subject" label="Subject">
-                      <Form.Control type="text" placeholder="RE: I love Abby the Bee!" />
+                      <Form.Control name="subject" type="text" placeholder="RE: I love Abby the Bee!" />
                     </FloatingLabel>
                   </Col>
                   <Col xs={12}>
                     <FloatingLabel controlId="message" label="Message">
-                      <Form.Control as="textarea" placeholder="Leave a message here" maxlength="640" required rows={1} style={{minHeight: '58px', resize: 'none'}} />
+                      <Form.Control as="textarea" name="message" placeholder="Leave a message here" maxlength="640" required rows={1} style={{minHeight: '58px', resize: 'none'}} />
                       <Form.Control.Feedback type="invalid">Oops! You forgot to write a message.</Form.Control.Feedback>
                     </FloatingLabel>
                   </Col>
