@@ -611,7 +611,7 @@ const Home = () => {
                 <div class="row g-3">
                   <Col md="6">
                     <FloatingLabel controlId="name" label="Your Name">
-                      <Form.Control type="text" placeholder="David Cruz" />
+                      <Form.Control type="text" placeholder="Sandra Lena" />
                     </FloatingLabel>
                   </Col>
                   <Col md="6">
@@ -632,7 +632,6 @@ const Home = () => {
                     </FloatingLabel>
                   </Col>
                   <Col xs={12}>
-                    <input type="hidden" name="form-name" value="contact" />
                     <Button className="py-3 px-5" type="submit">Send Message</Button>
                   </Col>
                 </div>
