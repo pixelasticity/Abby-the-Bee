@@ -607,7 +607,7 @@ const Home = () => {
             </Col>
             <Col md="6" class="wow animate__fadeInUp" data-wow-delay="0.5s">
               <p class="mb-4">If you would like your experience reading <cite>Abby the Bee</cite> to be featured in the testimonial section, send me a quick note, and how you would like your name to appear. Then you will appear on the website!</p>
-              <Form name="contact" noValidate validated={validated} onSubmit={handleSubmit} data-netlify="true">
+              <Form name="contact" noValidate validated={validated} onSubmit={handleSubmit} method="POST" data-netlify="true">
                 <div class="row g-3">
                   <Col md="6">
                     <FloatingLabel controlId="name" label="Your Name">
