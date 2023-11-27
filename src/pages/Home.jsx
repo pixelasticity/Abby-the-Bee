@@ -607,12 +607,6 @@ const Home = () => {
             </Col>
             <Col md="6" class="wow animate__fadeInUp" data-wow-delay="0.5s">
               <p class="mb-4">If you would like your experience reading <cite>Abby the Bee</cite> to be featured in the testimonial section, send me a quick note, and how you would like your name to appear. Then you will appear on the website!</p>
-              <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                <input type="text" name="name" />
-                <input type="email" name="email" />
-                <input type="text" name="subject" />
-                <textarea name="message"></textarea>
-              </form>
               <Form name="contact" noValidate validated={validated} onSubmit={handleSubmit} method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="row g-3">
