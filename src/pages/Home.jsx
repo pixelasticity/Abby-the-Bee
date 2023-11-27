@@ -632,6 +632,7 @@ const Home = () => {
                     </FloatingLabel>
                   </Col>
                   <Col xs={12}>
+                    <input type="hidden" name="form-name" value="contact" />
                     <Button className="py-3 px-5" type="submit">Send Message</Button>
                   </Col>
                 </div>
