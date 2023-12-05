@@ -26,7 +26,8 @@ const Header = ({ head, description }) => {
               </h2>
               <div className="typed-text d-none">{description}</div>
               <div className="d-flex align-items-center pt-5">
-                <Button href="https://www.amazon.com/Abby-makes-friend-beach-Abeja/dp/B0CH2FX59P/" className="btn btn-primary py-3 px-4 me-5">Buy Book Now</Button>
+                <Button href="https://www.amazon.com/Abby-makes-friend-beach-Abeja/dp/B0CH2FX59P/" className="btn btn-primary py-3 px-4 me-3" title="Buy 'Abby the Bee Makes a Friend at the Beach' on Amazon">Amazon</Button>
+                <Button href="https://www.barnesandnoble.com/w/abby-the-bee-makes-a-friend-at-the-beach-alexander-bell/1144052422?ean=9798859869893" className="btn btn-primary py-3 px-4 me-3" title="Buy 'Abby the Bee Makes a Friend at the Beach' at Barnes &amp; Noble">Barnes &amp; Noble</Button>
                 {/* <button type="button" className="btn-play" data-bs-toggle="modal"
                   data-src="https://www.youtube.com/embed/bY9IX7lHvs8" onClick={() => handleShow(true)}>
                   <span></span>
